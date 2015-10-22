@@ -1,0 +1,26 @@
+{
+  "name": "assignment-jQuery-photo-albums",
+  "authors": [
+    "Jet Balagtas <jetbalagtas@gmail.com>"
+  ],
+  "description": "Create a SPA with 6 clickable photo albums, that reveals thumbnail views of 3 photos.",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "jquery",
+    "dom-traversal"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
