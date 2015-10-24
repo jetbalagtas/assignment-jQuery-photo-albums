@@ -1,41 +1,52 @@
 $(document).ready(function () {
   // ready for dom (hopefully)
-var myPhotoAlbumTemplate = _.template($('#photoAlbumTmpl').html());
-console.log("photo-album template: ", myPhotoAlbumTemplate);
-window.myPhotoAlbumHTML = "";
+var albumsView = _.template($('#albumsViewTmpl').html());
+console.log("photo-album template: ", albumsView);
+window.albumCoversHTML = "";
 
 // merge data from myAlbums with markup in order to add to html
   _.each(myAlbums, function (currVal, idx, arr) {
-    myPhotoAlbumHTML += myPhotoAlbumTemplate(currVal);
-      // console.log('myPhotoAlbumHTML: ', myPhotoAlbumHTML);
+    albumCoversHTML += albumsView(currVal);
+    console.log('albumCoversHTML: ', albumCoversHTML);
   });
 
 // markup for the dom
-var headerTitle = "<header><h1>My Albums</h1></header>";
+var headerTitle = "<header><h1>Summer 2015</h1></header>";
 $('header').html(headerTitle);
 
-$('.albums').html(myPhotoAlbumHTML);
+$('.albumCollection').html(albumCoversHTML);
 
 var homeOfAlbums = _.filter(myAlbums, function (currItem, idx) {
-  return idx < 2;
+  return homeOfAlbums;
 });
   _.each(homeOfAlbums, function (currItem) {
-    $('.home').append(myPhotoAlbumTemplate(currItem));
+    $('.home').html(albumsView(currItem));
   });
 
-  $('.albums').click(function (event) {
-    $(this).closest('section').remove();
+  $('.albums').on('click', function (event) {
+    event.preventDefault();
+    $(this).closest('.hidden').remove();
+    $(this).closest('.active-section').addClass(single-album);
   });
 
-$('nav a').on('click', function (event) {
-  event.preventDefault();
-    var clickedSection = "." + $(this).attr('rel');
-    console.log(clickedSection);
-    $(clickedSection).addClass('active-section');
-    $(clickedSection).siblings('section').removeClass('active-section');
-});
+// $('nav a').on('click', function (event) {
+//   event.preventDefault();
+//     var clickedSection = "." + $(this).attr('rel');
+//     console.log(clickedSection);
+//     $(clickedSection).addClass('active-section');
+//     $(clickedSection).siblings('section').removeClass('active-section');
+// });
 
-
+// $('.album1').on('click', function(event){
+//  event.preventDefault();
+//  $('.photo-boxes-container').toggleClass('hidden');
+//  $('.container1').append("<img src='" + photos.pics1[0] + "'>");
+//  $('.container1').append("<img src='" + photos.pics2[0] + "'>");
+//  $('.container1').append("<img src='" + photos.pics3[0] + "'>");
+//  $('.container1').append("<img src='" + photos.pics4[0] + "'>");
+//  $('.container1').append("<img src='" + photos.pics5[0] + "'>");
+//  $('.container1').append("<img src='" + photos.pics6[0] + "'>");
+// });
 
 
 

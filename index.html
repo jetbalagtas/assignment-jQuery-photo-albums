@@ -5,53 +5,40 @@
     <title>My Photo Albums</title>
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
-    <script type="text/html" id="photoAlbumTmpl">
-      <section class="pics">
+    <script type="text/html" id="albumsViewTmpl">
+      <article class="albums" data-index="">
         <img src="<%= photo1 %>">
-        <img src="<%= photo2 %>">
-        <img src="<%= photo3 %>">
-      </section>
+        <p><%= albumName %></p>
+      </article>
     </script>
   </head>
   <body>
     <header><h1></h1></header>
-    <aside>
-      <div class="box">
-        <nav>
+
+
+        <!-- <aside>
           <ul>
             <li><a href="" rel="home">Home</a></li>
-            <li><a href="" rel="san-gimignano">San Gimignano</a></li>
+            <li><a href="" rel="madrid">Madrid</a></li>
             <li><a href="" rel="toldeo">Toledo</a></li>
             <li><a href="" rel="portofino">Portofino</a></li>
-            <li><a href="" rel="g-code-holsters">G-Code Holsters</a></li>
-            <li><a href="" rel="mercedes-amg">Mercedes AMG</a></li>
+            <li><a href="" rel="cruise">Cruise</a></li>
+            <li><a href="" rel="cinque-terre">Cinque Terre</a></li>
             <li><a href="" rel="rockwell">Rockwell</a></li>
           </ul>
-        </nav>
-      </div>
-    </aside>
-    <section class="home">
-      <section class="albums">
-        <section class="san-gimignano active-section">
+        </aside> -->
+
+        <section class="albumCollection hidden active-section">
+          <!-- <div class="content-body"> -->
+            <section class="albums">
+            </section>
+
+            <section class="single-album">
+            </section>
 
         </section>
-        <section class="toledo">
 
-        </section>
-        <section class="portofino">
 
-        </section>
-        <section class="g-code-holsters">
-
-        </section>
-        <section class="mercedes-amg">
-
-        </section>
-        <section class="rockwell">
-
-        </section>
-      </section>
-    </section>
     <footer></footer>
 
 
