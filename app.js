@@ -12,26 +12,26 @@ window.albumCoversHTML = "";
   });
 
 // Single Album View
-  var singleAlbumView = _.template($('#singleAlbumTmpl').html());
-  console.log("single-album template: ", singleAlbumView);
-  window.singleAlbumHTML = "";
+var singleAlbumView = _.template($('#singleAlbumTmpl').html());
+console.log("single-album template: ", singleAlbumView);
+window.singleAlbumHTML = "";
 
-  // merge data from myAlbums with markup in order to add to html
-    _.each(myAlbums, function (currVal, idx, arr) {
-      singleAlbumHTML += singleAlbumView(currVal);
-      console.log('singleAlbumHTML: ', singleAlbumHTML);
-    });
+// merge data from myAlbums with markup in order to add to html
+  _.each(myAlbums, function (currVal, idx, arr) {
+    singleAlbumHTML += singleAlbumView(currVal);
+    console.log('singleAlbumHTML: ', singleAlbumHTML);
+  });
 
-// // Single Picture View
-//   var singlePicView = _.template($('#singlePicTmpl').html());
-//   console.log("solo-pic template: ", singlePicView);
-//   window.singlePicHTML = "";
-//
-//   // merge data from myAlbums with markup in order to add to html
-//     _.each(myAlbums, function (currVal, idx, arr) {
-//       singlePicHTML += singlePicView(currVal);
-//       console.log('singlePicHTML: ', singlePicHTML);
-//     });
+// Single Picture View
+var singlePicView = _.template($('#singlePicTmpl').html());
+console.log("solo-pic template: ", singlePicView);
+window.singlePicHTML = "";
+
+// merge data from myAlbums with markup in order to add to html
+  _.each(myAlbums, function (currVal, idx, arr) {
+    singlePicHTML += singlePicView(currVal);
+    console.log('singlePicHTML: ', singlePicHTML);
+  });
 
 // markup for the dom
 var headerTitle = "<header><h1>Summer 2015</h1></header>";
@@ -50,6 +50,14 @@ $('.albumCollection').html(albumCoversHTML);
 //   return myAlbums.albumName;
 // });
 
+// $('nav a').on('click', function (event) {
+//   event.preventDefault();
+//     var clickedSection = "." + $(this).attr('rel');
+//     console.log(clickedSection);
+//     $(clickedSection).addClass('active-section');
+//     $(clickedSection).siblings('section').removeClass('active-section');
+// });
+
   $('.albums').on('click', function (event) {
     event.preventDefault();
     $('.single-album').removeClass("hidden");
@@ -63,7 +71,7 @@ $('.albumCollection').html(albumCoversHTML);
     event.preventDefault();
     $('.solo-pic').removeClass("hidden");
     $('solo-pic').html(singlePicHTML);
-    $('.sidebar').removeClass("hidden");
+    $('.sidebar').addClass("hidden");
     $('.single-album').addClass("hidden");
     $('h1').text('myAlbums.albumName');
   });
@@ -97,7 +105,6 @@ $('.albumCollection').html(albumCoversHTML);
 //  $('.container1').append("<img src='" + photos.pics5[0] + "'>");
 //  $('.container1').append("<img src='" + photos.pics6[0] + "'>");
 // });
-
 
 
 

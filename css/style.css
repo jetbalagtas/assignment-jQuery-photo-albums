@@ -50,14 +50,11 @@ header {
   margin: 4px;
   margin-top: 75px; }
 
-.pic {
-  display: inline-block;
-  vertical-align: top;
-  width: 30%;
-  height: 250px;
-  background-color: blue;
-  margin: 4px;
-  margin-top: 75px; }
+.one-pic {
+  width: 75%;
+  height: 575px;
+  background-color: #3b5998;
+  margin: 50px auto; }
 
 p {
   color: white; }
