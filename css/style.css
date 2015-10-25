@@ -50,6 +50,15 @@ header {
   margin: 4px;
   margin-top: 75px; }
 
+.pic {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  height: 250px;
+  background-color: blue;
+  margin: 4px;
+  margin-top: 75px; }
+
 p {
   color: white; }
 

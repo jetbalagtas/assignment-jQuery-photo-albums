@@ -13,7 +13,7 @@ window.albumCoversHTML = "";
 
 // Single Album View
   var singleAlbumView = _.template($('#singleAlbumTmpl').html());
-  console.log("photo-album template: ", singleAlbumView);
+  console.log("single-album template: ", singleAlbumView);
   window.singleAlbumHTML = "";
 
   // merge data from myAlbums with markup in order to add to html
@@ -21,6 +21,17 @@ window.albumCoversHTML = "";
       singleAlbumHTML += singleAlbumView(currVal);
       console.log('singleAlbumHTML: ', singleAlbumHTML);
     });
+
+// // Single Picture View
+//   var singlePicView = _.template($('#singlePicTmpl').html());
+//   console.log("solo-pic template: ", singlePicView);
+//   window.singlePicHTML = "";
+//
+//   // merge data from myAlbums with markup in order to add to html
+//     _.each(myAlbums, function (currVal, idx, arr) {
+//       singlePicHTML += singlePicView(currVal);
+//       console.log('singlePicHTML: ', singlePicHTML);
+//     });
 
 // markup for the dom
 var headerTitle = "<header><h1>Summer 2015</h1></header>";
@@ -34,15 +45,27 @@ $('.albumCollection').html(albumCoversHTML);
 //   _.each(homeOfAlbums, function (currItem) {
 //     $('.home').html(albumsView(currItem));
 //   });
+//
+// var oneAlbumHeader = _.each(myAlbums, function() {
+//   return myAlbums.albumName;
+// });
 
-  $('.albumCollection').on('click', function (event) {
+  $('.albums').on('click', function (event) {
     event.preventDefault();
     $('.single-album').removeClass("hidden");
     $('single-album').html(singleAlbumHTML);
     $('.sidebar').removeClass("hidden");
     $('.albumCollection').addClass("hidden");
-    var oneAlbumHeader =
-    $('h1').text('albumName');
+    $('h1').text('myAlbums.albumName');
+  });
+
+  $('.pics').on('click', function (event) {
+    event.preventDefault();
+    $('.solo-pic').removeClass("hidden");
+    $('solo-pic').html(singlePicHTML);
+    $('.sidebar').removeClass("hidden");
+    $('.single-album').addClass("hidden");
+    $('h1').text('myAlbums.albumName');
   });
 
 // Lauren's code
@@ -54,6 +77,7 @@ $('.albumCollection').html(albumCoversHTML);
 // $('.navbar').addClass('allpicsstyle');
 // $(".column1r2").siblings().css("display","none");});
 
+// Calvin's code
 // $('nav a').on('click', function (event) {
 //   event.preventDefault();
 //     var clickedSection = "." + $(this).attr('rel');
