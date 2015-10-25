@@ -10,7 +10,17 @@ body {
   margin: auto; }
 
 h1 {
-  text-align: center; }
+  text-align: center;
+  padding-top: 5px;
+  color: white; }
+
+header {
+  height: 50px;
+  margin-top: -21px;
+  background-color: #3b5998; }
+
+.hidden {
+  display: none; }
 
 .home {
   padding-top: 30px;
@@ -24,6 +34,22 @@ h1 {
   background-color: #4C4C4D;
   margin: 20px; }
 
+.single-album {
+  width: 80%;
+  vertical-align: top;
+  text-align: center;
+  padding: 0;
+  margin: auto; }
+
+.pics {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  height: 250px;
+  background-color: red;
+  margin: 4px;
+  margin-top: 75px; }
+
 p {
   color: white; }
 
@@ -31,9 +57,8 @@ aside {
   width: 15%;
   margin: 0;
   padding: 0;
-  display: inline-block;
   float: left;
-  margin-top: 100px; }
+  margin-top: 0; }
   aside ul {
     margin: 0;
     padding: 0; }
@@ -46,7 +71,8 @@ aside {
         aside ul > li:hover a {
           color: white; }
     aside ul a {
-      text-decoration: none; }
+      text-decoration: none;
+      color: #3b5998; }
 
 img {
   width: 100%; }

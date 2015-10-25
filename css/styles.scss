@@ -13,13 +13,19 @@ body {
 
 h1 {
   text-align: center;
+  padding-top: 5px;
+  color: white;
 }
 
-// .content-body {
-//   width: 100%;
-//   display: inline-block;
-//   text-align: center;
-// }
+header {
+  height: 50px;
+  margin-top: -21px;
+  background-color: #3b5998;
+}
+
+.hidden {
+  display: none;
+}
 
 .home {
   padding-top: 30px;
@@ -37,6 +43,25 @@ h1 {
   margin: 20px;
 }
 
+.single-album {
+  width: 80%;
+  vertical-align: top;
+  text-align: center;
+  padding: 0;
+  margin: auto;
+}
+
+.pics {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  height: 250px;
+  // overflow: hidden;
+  background-color: red;
+  margin: 4px;
+  margin-top: 75px;
+}
+
 p {
   color: white;
 }
@@ -45,9 +70,8 @@ aside {
   width: 15%;
   margin: 0;
   padding: 0;
-  display: inline-block;
   float: left;
-  margin-top: 100px;
+  margin-top: 0;
   ul {
     margin: 0;
     padding: 0;
@@ -64,6 +88,7 @@ aside {
     }
     a {
       text-decoration: none;
+      color: #3b5998;
     }
   }
 }

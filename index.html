@@ -6,17 +6,24 @@
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
     <script type="text/html" id="albumsViewTmpl">
-      <article class="albums" data-index="">
+      <article class="albums">
         <img src="<%= photo1 %>">
         <p><%= albumName %></p>
       </article>
     </script>
+    <script type="text/html" id="singleAlbumTmpl">
+      <article class="pics" data-index="">
+        <img src="<%= photo1 %>">
+        <img src="<%= photo2 %>">
+        <img src="<%= photo3 %>">
+      </article>
+    </script>
   </head>
   <body>
-    <header><h1></h1></header>
+    <header class="albumsHeader"><h1></h1></header>
 
 
-        <!-- <aside>
+        <aside class="sidebar hidden">
           <ul>
             <li><a href="" rel="home">Home</a></li>
             <li><a href="" rel="madrid">Madrid</a></li>
@@ -26,16 +33,25 @@
             <li><a href="" rel="cinque-terre">Cinque Terre</a></li>
             <li><a href="" rel="rockwell">Rockwell</a></li>
           </ul>
-        </aside> -->
+        </aside>
 
-        <section class="albumCollection hidden active-section">
-          <!-- <div class="content-body"> -->
+        <section class="albumCollection">
             <section class="albums">
             </section>
+        </section>
 
-            <section class="single-album">
-            </section>
+        <section class="single-album hidden">
+          <section class="pics">
+          </section>
+          <section class="pics">
+          </section>
+          <section class="pics">
+          </section>
+        </section>
 
+        <section class="solo-pic hidden">
+          <!-- <section class="albums">
+          </section> -->
         </section>
 
 
