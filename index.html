@@ -5,24 +5,6 @@
     <title>My Photo Albums</title>
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
-    <script type="text/html" id="albumsViewTmpl">
-      <article class="albums">
-        <img src="<%= photo1 %>">
-        <p><%= albumName %></p>
-      </article>
-    </script>
-    <script type="text/html" id="singleAlbumTmpl">
-      <article class="pics" data-index="">
-        <img src="<%= photo1 %>">
-        <img src="<%= photo2 %>">
-        <img src="<%= photo3 %>">
-      </article>
-    </script>
-    <script type="text/html" id="singlePicTmpl">
-      <article class="one-pic" data-index="">
-        <img src="<%= photo1 %>">
-      </article>
-    </script>
   </head>
   <body>
     <header class="albumsHeader"><h1></h1></header>
@@ -36,21 +18,25 @@
 
 
         <!-- Single Album View with Sidebar Navigation -->
-        <aside class="sidebar hidden">
-          <ul>
-            <li><a href="" rel="home">Home</a></li>
-            <li><a href="" rel="madrid">Madrid</a></li>
-            <li><a href="" rel="toldeo">Toledo</a></li>
-            <li><a href="" rel="portofino">Portofino</a></li>
-            <li><a href="" rel="cruise">Cruise</a></li>
-            <li><a href="" rel="cinque-terre">Cinque Terre</a></li>
-            <li><a href="" rel="rockwell">Rockwell</a></li>
-          </ul>
-        </aside>
-          <section class="single-album hidden">
-            <section class="pics">
+        <section class="single-album-with-sidebar hidden">
+          <aside class="sidebar">
+            <nav>
+              <ul>
+                <li><a href="" rel="home">Home</a></li>
+                <li><a href="" rel="madrid">Madrid</a></li>
+                <li><a href="" rel="toldeo">Toledo</a></li>
+                <li><a href="" rel="portofino">Portofino</a></li>
+                <li><a href="" rel="cruise">Cruise</a></li>
+                <li><a href="" rel="cinque-terre">Cinque Terre</a></li>
+                <li><a href="" rel="rockwell">Rockwell</a></li>
+              </ul>
+            </nav>
+          </aside>
+            <section class="single-album">
+              <section class="pics">
+              </section>
             </section>
-          </section>
+        </section>
 
 
         <!-- Single Image View -->
@@ -62,25 +48,12 @@
 
     <footer></footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- lib files -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <!-- app files -->
     <script src="photo-album.js"></script>
+    <script src="albumTemplates.js"></script>
     <script src="app.js"></script>
 
   </body>
