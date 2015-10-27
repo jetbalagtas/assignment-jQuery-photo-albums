@@ -13,7 +13,7 @@ var photoAlbumPage = {
       var element = this;
       photoAlbumPage.showActiveSection(element);
     });
-    $('albums').on('click', '.delete', function(event) {
+    $('albums').on('click', function(event) {
       event.preventDefault();
       var element = this;
       photoAlbumPage.showActiveSection(element);
