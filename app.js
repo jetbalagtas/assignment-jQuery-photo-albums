@@ -13,18 +13,26 @@ var photoAlbumPage = {
       var element = this;
       photoAlbumPage.showActiveSection(element);
     });
+    $('albums').on('click', '.delete', function(event) {
+      event.preventDefault();
+      var element = this;
+      photoAlbumPage.showActiveSection(element);
+    });
   },
   styling: function() {
     photoAlbumPage.loadAlbums();
   },
   loadAlbums: function () {
     var albumCoversHTML = "";
+    var singleAlbumHTML = "";
     _.each(myAlbums, function (currVal, idx, arr) {
       albumCoversHTML += photoAlbumPage.loadTemplate('albumsViewTmpl', currVal);
+      singleAlbumHTML += photoAlbumPage.loadTemplate('singleAlbumTmpl', currVal);
     });
     $('.albumCollection').html(albumCoversHTML);
     var headerTitle = "<header><h1>Summer 2015</h1></header>";
     $('.albumsHeader').html(headerTitle);
+    $('.single-album').html(singleAlbumHTML);
   },
   showActiveSection: function (clickedItem) {
     var clickedSection = "." + $(clickedItem).attr('rel');
@@ -50,7 +58,7 @@ var photoAlbumPage = {
 //     console.log('albumCoversHTML: ', albumCoversHTML);
 //   });
 //
-// // Single Album View
+// Single Album View
 // var singleAlbumView = _.template($('#singleAlbumTmpl').html());
 // console.log("photo-album template: ", singleAlbumView);
 // window.singleAlbumHTML = "";
@@ -61,8 +69,8 @@ var photoAlbumPage = {
 //   });
 //   // _.each(myAlbums, function (currVal, idx, arr) {
 //     singleAlbumHTML += singleAlbumView(Madrid[0]);
-//   //   console.log('singleAlbumHTML: ', singleAlbumHTML);
-//   // });
+  //   console.log('singleAlbumHTML: ', singleAlbumHTML);
+  // });
 //
 // // Single Picture View
 // var singlePicView = _.template($('#singlePicTmpl').html());
