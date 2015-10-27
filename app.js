@@ -35,7 +35,7 @@ var photoAlbumPage = {
     $('.single-album').html(singleAlbumHTML);
   },
   showActiveSection: function (clickedItem) {
-    var clickedSection = "." + $(clickedItem).attr('rel');
+    var clickedSection = "." + $(clickedItem).attr('rel=albumName');
     $(clickedSection).addClass('active-section');
     $(clickedSection).siblings('section').removeClass('active-section');
   },
