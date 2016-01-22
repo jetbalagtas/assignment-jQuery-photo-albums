@@ -95,7 +95,7 @@
 //   ]
 // };
 
-// myAlbums array consists of 6 objects: Madrid, Toledo, Portofino, Cruise, CinqueTerre, and Rockwell
+// ** difficult way: don't put property names here that are in your code. myAlbums array consists of 6 objects: Madrid, Toledo, Portofino, Cruise, CinqueTerre, and Rockwell
 var myAlbums = [
   {
     albumName: 'Madrid',

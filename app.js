@@ -8,13 +8,17 @@ var photoAlbumPage = {
     photoAlbumPage.events();
   },
   events: function() {
-    $('nav a').on('click', function(event) {
+    $('nav').on('click', 'a', function(event) {
       event.preventDefault();
-      var element = this;
+      var element = $('this').attr('rel');
+      var $pageSection = $(sectionclass);
+      $(sectionclass).addClass('active-section');
+      $(sectionclass).siblings('secton').removeClass('active-section');
       photoAlbumPage.showActiveSection(element);
     });
-    $('albums').on('click', function(event) {
+    $('albums').on('click', 'rel', function(event) {
       event.preventDefault();
+      console.log('this', this);
       var element = this;
       photoAlbumPage.showActiveSection(element);
     });
