@@ -2,6 +2,9 @@
 
 ### [Visit the live demo here](http://jetbalagtas.github.io/jQuery-photo-albums)
 
+### Quick note from Jet
+This was part of the our 4th week assignments, Oct. 27, 2014.
+
 ## Description
 You're going to create a gallery application which will allow the user to view their albums as well as the individual photos contained within, as a single page application (SPA).
 
